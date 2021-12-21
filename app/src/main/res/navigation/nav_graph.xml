@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/lista_filme_fragment">
+
+    <fragment
+        android:id="@+id/lista_filme_fragment"
+        tools:layout="@layout/lista_filmes_layout"
+        android:name="br.com.marquesapps.cine.ui.fragments.ListaFilmesFragment"
+        android:label="Filmes em Cartaz" >
+        <action
+            android:id="@+id/acao_lista_filme_fragment_para_filme_fragment"
+            app:destination="@id/filme_fragment" />
+        <action
+            android:id="@+id/acao_lista_filme_fragment_para_poster_fragment"
+            app:destination="@id/poster_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/filme_fragment"
+        tools:layout="@layout/filme_layout"
+        android:name="br.com.marquesapps.cine.ui.fragments.FilmeFragment"
+        android:label="Filme" >
+        <argument
+            android:name="filmeId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/acao_filme_fragment_para_poster_fragment"
+            app:destination="@id/poster_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/poster_fragment"
+        tools:layout="@layout/poster_layout"
+        android:name="br.com.marquesapps.cine.ui.fragments.PosterFragment"
+        android:label="Poster" >
+        <argument
+            android:name="pathImagem"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>
