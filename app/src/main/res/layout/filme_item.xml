@@ -28,7 +28,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/filme_item_poster"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="3dp"
@@ -37,14 +37,15 @@
                 android:carregaImagem="@{filme.filme.poster}"
                 android:src="@drawable/ic_movie_24"
                 android:onClick="@{onPosterClickListener}"
+                android:contentDescription="@string/poster_descricao"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textView"
+                app:layout_constraintEnd_toStartOf="@+id/filme_item_nome"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.3" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/filme_item_nome"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -56,12 +57,12 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/imageView"
+                app:layout_constraintStart_toEndOf="@id/filme_item_poster"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Homem-Aranha: Sem Volta Para Casa" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/filme_item_genero"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -72,12 +73,12 @@
                 android:maxLines="1"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="@+id/filme_item_nome"
+                app:layout_constraintTop_toBottomOf="@+id/filme_item_nome"
                 tools:text="Gênero: Ação" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/filme_item_data_de_lancamento"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -90,8 +91,8 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="@+id/filme_item_nome"
+                app:layout_constraintTop_toBottomOf="@+id/filme_item_genero"
                 tools:text="Data de lançamento: 15/12/2021" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

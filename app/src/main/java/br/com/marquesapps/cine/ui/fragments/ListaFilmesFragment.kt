@@ -47,7 +47,7 @@ class ListaFilmesFragment : Fragment() {
     }
 
     private fun configuraAdapter() {
-        viewDataBinding.listaFilmes.adapter = adapter
+        viewDataBinding.listaFilmesLayoutListaFilmes.adapter = adapter
         adapter.onFilmeClickListener = {
             salvarFilmeEVaiParaFilmeFragment(it)
         }

@@ -14,10 +14,11 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/lista_filmes"
+            android:id="@+id/poster_layout_lista_filmes"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:carregaImagem="@{pathImagem}"
+            android:contentDescription="@string/poster_descricao"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
